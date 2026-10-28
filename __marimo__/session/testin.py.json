@@ -1,0 +1,41 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.1",
+    "script_metadata_hash": "df152d2338802724f17dcb7db5afa3b1"
+  },
+  "cells": [
+    {
+      "id": "ac45b49d-3f31-4419-8247-33b16e38d83e",
+      "code_hash": "d033226901aaf712c26ed6aa373b556d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "a6907a83-908d-47bb-a837-282cbed4f936",
+      "code_hash": "42e54b572c924fe0637d613b456b7a09",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='a6907a83-908d-47bb-a837-282cbed4f936-0' random-id='b5e44220-3622-ea36-caa9-3edeed59f1af'><marimo-anywidget data-initial-value='{&quot;model_id&quot;:&quot;da8669a0cddb4d47b332e3ac7ae19137&quot;}' data-label='null' data-model-id='&quot;da8669a0cddb4d47b332e3ac7ae19137&quot;'></marimo-anywidget></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "0e3b46a6-add9-413c-8104-4d951a9352e4",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

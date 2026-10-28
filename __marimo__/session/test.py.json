@@ -1,0 +1,126 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.1",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "setup",
+      "code_hash": "a94a99b861b6751ebc58c8a3678e9bcc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-ui-element object-id='setup-0' random-id='0151d772-92ef-0a9e-9f0f-a080b52cfcd5'><marimo-anywidget data-initial-value='{&quot;model_id&quot;:&quot;c95017e3d09b4b8bbf0782de6c71967a&quot;}' data-label='null' data-model-id='&quot;c95017e3d09b4b8bbf0782de6c71967a&quot;'></marimo-anywidget></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hzvj",
+      "code_hash": "65e10f436e1a27b44eb7682f39f9b470",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TOap",
+      "code_hash": "ed0e19403234e24c7f06a1c6785196c1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "QTUK",
+      "code_hash": "5db9860dc2d3673d97e150e6e7933678",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xdRQ",
+      "code_hash": "9d404f848c7570df629231ecbdf5388a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "sSxm",
+      "code_hash": "f1d829a41a6f718b68bc0acd7f53de12",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"about-the-data\">About the data</h1>\n<span class=\"paragraph\">Input variables:\n   # bank client data:\n   1 - age (numeric)\n   2 - job : type of job (categorical: \"admin.\",\"unknown\",\"unemployed\",\"management\",\"housemaid\",\"entrepreneur\",\"student\",\n                                       \"blue-collar\",\"self-employed\",\"retired\",\"technician\",\"services\") \n   3 - marital : marital status (categorical: \"married\",\"divorced\",\"single\"; note: \"divorced\" means divorced or widowed)\n   4 - education (categorical: \"unknown\",\"secondary\",\"primary\",\"tertiary\")\n   5 - default: has credit in default? (binary: \"yes\",\"no\")\n   6 - balance: average yearly balance, in euros (numeric) \n   7 - housing: has housing loan? (binary: \"yes\",\"no\")\n   8 - loan: has personal loan? (binary: \"yes\",\"no\")\n   # related with the last contact of the current campaign:\n   9 - contact: contact communication type (categorical: \"unknown\",\"telephone\",\"cellular\") \n  10 - day: last contact day of the month (numeric)\n  11 - month: last contact month of year (categorical: \"jan\", \"feb\", \"mar\", ..., \"nov\", \"dec\")\n  12 - duration: last contact duration, in seconds (numeric)\n   # other attributes:\n  13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)\n  14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)\n  15 - previous: number of contacts performed before this campaign and for this client (numeric)\n  16 - poutcome: outcome of the previous marketing campaign (categorical: \"unknown\",\"other\",\"failure\",\"success\")</span>\n<span class=\"paragraph\">Output variable (desired target):\n  17 - y - has the client subscribed a term deposit? (binary: \"yes\",\"no\")</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "gPId",
+      "code_hash": "8277e0910d750195b448797616e091ad",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='gPId-0' random-id='d0c0bb06-2df7-a4f0-b76c-ddb1fef9cd3b'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;age&#92;&quot;:30,&#92;&quot;job&#92;&quot;:&#92;&quot;unemployed&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;primary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:1787,&#92;&quot;housing&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:19,&#92;&quot;month&#92;&quot;:&#92;&quot;oct&#92;&quot;,&#92;&quot;duration&#92;&quot;:79,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:33,&#92;&quot;job&#92;&quot;:&#92;&quot;services&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;secondary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:4789,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:11,&#92;&quot;month&#92;&quot;:&#92;&quot;may&#92;&quot;,&#92;&quot;duration&#92;&quot;:220,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:339,&#92;&quot;previous&#92;&quot;:4,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;failure&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:35,&#92;&quot;job&#92;&quot;:&#92;&quot;management&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;single&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;tertiary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:1350,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:16,&#92;&quot;month&#92;&quot;:&#92;&quot;apr&#92;&quot;,&#92;&quot;duration&#92;&quot;:185,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:330,&#92;&quot;previous&#92;&quot;:1,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;failure&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:30,&#92;&quot;job&#92;&quot;:&#92;&quot;management&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;tertiary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:1476,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;day&#92;&quot;:3,&#92;&quot;month&#92;&quot;:&#92;&quot;jun&#92;&quot;,&#92;&quot;duration&#92;&quot;:199,&#92;&quot;campaign&#92;&quot;:4,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:59,&#92;&quot;job&#92;&quot;:&#92;&quot;blue-collar&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;secondary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:0,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;day&#92;&quot;:5,&#92;&quot;month&#92;&quot;:&#92;&quot;may&#92;&quot;,&#92;&quot;duration&#92;&quot;:226,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:35,&#92;&quot;job&#92;&quot;:&#92;&quot;management&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;single&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;tertiary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:747,&#92;&quot;housing&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:23,&#92;&quot;month&#92;&quot;:&#92;&quot;feb&#92;&quot;,&#92;&quot;duration&#92;&quot;:141,&#92;&quot;campaign&#92;&quot;:2,&#92;&quot;pdays&#92;&quot;:176,&#92;&quot;previous&#92;&quot;:3,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;failure&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:36,&#92;&quot;job&#92;&quot;:&#92;&quot;self-employed&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;tertiary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:307,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:14,&#92;&quot;month&#92;&quot;:&#92;&quot;may&#92;&quot;,&#92;&quot;duration&#92;&quot;:341,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:330,&#92;&quot;previous&#92;&quot;:2,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;other&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:39,&#92;&quot;job&#92;&quot;:&#92;&quot;technician&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;secondary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:147,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:6,&#92;&quot;month&#92;&quot;:&#92;&quot;may&#92;&quot;,&#92;&quot;duration&#92;&quot;:151,&#92;&quot;campaign&#92;&quot;:2,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:41,&#92;&quot;job&#92;&quot;:&#92;&quot;entrepreneur&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;tertiary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:221,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;day&#92;&quot;:14,&#92;&quot;month&#92;&quot;:&#92;&quot;may&#92;&quot;,&#92;&quot;duration&#92;&quot;:57,&#92;&quot;campaign&#92;&quot;:2,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:43,&#92;&quot;job&#92;&quot;:&#92;&quot;services&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;primary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:-88,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:17,&#92;&quot;month&#92;&quot;:&#92;&quot;apr&#92;&quot;,&#92;&quot;duration&#92;&quot;:313,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:147,&#92;&quot;previous&#92;&quot;:2,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;failure&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:39,&#92;&quot;job&#92;&quot;:&#92;&quot;services&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;secondary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:9374,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;day&#92;&quot;:20,&#92;&quot;month&#92;&quot;:&#92;&quot;may&#92;&quot;,&#92;&quot;duration&#92;&quot;:273,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:43,&#92;&quot;job&#92;&quot;:&#92;&quot;admin.&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;secondary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:264,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:17,&#92;&quot;month&#92;&quot;:&#92;&quot;apr&#92;&quot;,&#92;&quot;duration&#92;&quot;:113,&#92;&quot;campaign&#92;&quot;:2,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:36,&#92;&quot;job&#92;&quot;:&#92;&quot;technician&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;tertiary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:1109,&#92;&quot;housing&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:13,&#92;&quot;month&#92;&quot;:&#92;&quot;aug&#92;&quot;,&#92;&quot;duration&#92;&quot;:328,&#92;&quot;campaign&#92;&quot;:2,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;},{&#92;&quot;age&#92;&quot;:20,&#92;&quot;job&#92;&quot;:&#92;&quot;student&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;single&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;secondary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:502,&#92;&quot;housing&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:30,&#92;&quot;month&#92;&quot;:&#92;&quot;apr&#92;&quot;,&#92;&quot;duration&#92;&quot;:261,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:-1,&#92;&quot;previous&#92;&quot;:0,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;unknown&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;yes&#92;&quot;},{&#92;&quot;age&#92;&quot;:31,&#92;&quot;job&#92;&quot;:&#92;&quot;blue-collar&#92;&quot;,&#92;&quot;marital&#92;&quot;:&#92;&quot;married&#92;&quot;,&#92;&quot;education&#92;&quot;:&#92;&quot;secondary&#92;&quot;,&#92;&quot;default&#92;&quot;:&#92;&quot;no&#92;&quot;,&#92;&quot;balance&#92;&quot;:360,&#92;&quot;housing&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;loan&#92;&quot;:&#92;&quot;yes&#92;&quot;,&#92;&quot;contact&#92;&quot;:&#92;&quot;cellular&#92;&quot;,&#92;&quot;day&#92;&quot;:29,&#92;&quot;month&#92;&quot;:&#92;&quot;jan&#92;&quot;,&#92;&quot;duration&#92;&quot;:89,&#92;&quot;campaign&#92;&quot;:1,&#92;&quot;pdays&#92;&quot;:241,&#92;&quot;previous&#92;&quot;:1,&#92;&quot;poutcome&#92;&quot;:&#92;&quot;failure&#92;&quot;,&#92;&quot;y&#92;&quot;:&#92;&quot;no&#92;&quot;}]&quot;' data-total-rows='4521' data-total-columns='17' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='15' data-field-types='[[&quot;age&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;job&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;marital&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;education&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;default&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;balance&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;housing&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;loan&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;contact&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;day&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;month&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;duration&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;campaign&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;pdays&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;previous&quot;,[&quot;integer&quot;,&quot;i64&quot;]],[&quot;poutcome&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;y&quot;,[&quot;string&quot;,&quot;str&quot;]]]' data-show-filters='true' data-show-download='true' data-show-search='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "yHDY",
+      "code_hash": "5d7faa853f5e522754e57ba00c2ece97",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Rows: 4521\nColumns: 17\n$ age       <i64> 30, 33, 35, 30, 59, 35, 36, 39, 41, 43\n$ job       <str> 'unemployed', 'services', 'management', 'management', 'blue-collar', 'management', 'self-employed', 'technician', 'entrepreneur', 'services'\n$ marital   <str> 'married', 'married', 'single', 'married', 'married', 'single', 'married', 'married', 'married', 'married'\n$ education <str> 'primary', 'secondary', 'tertiary', 'tertiary', 'secondary', 'tertiary', 'tertiary', 'secondary', 'tertiary', 'primary'\n$ default   <str> 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'\n$ balance   <i64> 1787, 4789, 1350, 1476, 0, 747, 307, 147, 221, -88\n$ housing   <str> 'no', 'yes', 'yes', 'yes', 'yes', 'no', 'yes', 'yes', 'yes', 'yes'\n$ loan      <str> 'no', 'yes', 'no', 'yes', 'no', 'no', 'no', 'no', 'no', 'yes'\n$ contact   <str> 'cellular', 'cellular', 'cellular', 'unknown', 'unknown', 'cellular', 'cellular', 'cellular', 'unknown', 'cellular'\n$ day       <i64> 19, 11, 16, 3, 5, 23, 14, 6, 14, 17\n$ month     <str> 'oct', 'may', 'apr', 'jun', 'may', 'feb', 'may', 'may', 'may', 'apr'\n$ duration  <i64> 79, 220, 185, 199, 226, 141, 341, 151, 57, 313\n$ campaign  <i64> 1, 1, 1, 4, 1, 2, 1, 2, 2, 1\n$ pdays     <i64> -1, 339, 330, -1, -1, 176, 330, -1, -1, 147\n$ previous  <i64> 0, 4, 1, 0, 0, 3, 2, 0, 0, 2\n$ poutcome  <str> 'unknown', 'failure', 'failure', 'unknown', 'unknown', 'failure', 'other', 'unknown', 'unknown', 'failure'\n$ y         <str> 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "HfsW",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
